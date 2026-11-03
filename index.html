@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doki Doki Reader Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="/img/logo.png" alt="">
+            <ul>
+                <li><a href="index.html" class="navLink active">Главная</a></li>
+                <li><a href="diary.html" class="navLink">Мой дневник</a></li>
+                <li><a href="statistics.html" class="navLink">Статистика</a></li>
+            </ul>
+            <button type="button" class="soundBtn">
+                <img src="/img/soundActive.png" alt="звук" id="soundIcon">
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="heroBlock">
+            <div class="heroContent">
+
+                <div style="display: none;">
+                    <img src="img/NatsukiActive.png" alt="">
+                    <img src="img/MonikaActive.png" alt="">
+                    <img src="img/SayoriActive.png" alt="">
+                    <img src="img/YuriActive.png" alt="">
+                </div>
+
+                <div class="girlCard" data-character="Natsuki" id="Natsuki">
+                    <div class="girlImage">
+                        <img alt="" src="img/natsukiPas.png" class="imgDefault">
+                        <img src="img/NatsukiActive.png" class="imgActive" alt="Natsuki Active">
+                    </div>
+                </div>
+
+                <div class="girlCard" data-character="Monika" id="Monika">
+                    <div class="girlImage">
+                        <img alt="" src="img/monikaPas.png">
+                    </div>
+                </div>
+
+                <div class="girlCard" data-character="Sayori" id="Sayori">
+                    <div class="girlImage">
+                        <img alt="" src="img/SayoriPas.png">
+                    </div>
+                </div>
+
+                <div class="girlCard" data-character="Yuri" id="Yuri">
+                    <div class="girlImage">
+                        <img alt="" src="img/YuriPas.png">
+                    </div>
+                </div>
+
+                <p class="helloText">Добро пожаловать в Читательский Клуб!
+                    Наш клуб - это твой личный интерактивный читательский дневник. Здесь ты можешь вести учет
+                    прочитанных книг, сохранять любимые цитаты и отслеживать свой прогресс чтения.
+                </p>
+                <div class="heroText">
+                    
+                </div>
+            </div>
+        </section>
+        <section class="readNow">
+            <h1>Читаю сейчас</h1>
+            <p id="RNguestText">«Здесь будет отображаться книга, которую ты читаешь прямо сейчас! Вступай в наш клуб, чтобы отслеживать свой прогресс и делиться мнением.»</p>
+            <img alt="" src="/img/RNexample.png" id="example" title="Это просто пример! Зарегистрируйся и добавляй свою первую книгу!">
+            <img alt="" src="/img/book.png" id="bookExample">
+            <a>Добавить запись</a>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

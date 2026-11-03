@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "doki";
+    src: url('/fonts/doki.otf');
+}
+
+@font-face {
+    font-family: 'calson';
+    src: url('/fonts/ofont.ru_Caslon\ Becker.ttf');
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-image: url('img/header.png');
+    height: 176px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;       
+    align-items: center;       
+    justify-content: space-between; 
+    padding: 0 40px;            
+    box-sizing: border-box;    
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+header nav ul {
+    font-family: 'doki';
+    font-size: 35px;
+    color: #FFFFFF;
+    -webkit-text-stroke: 9px #B7006E;
+    display: flex;
+    flex-direction: row;
+    list-style: none; 
+    gap: 150px;        
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    paint-order: stroke fill;
+}
+
+header .active {
+    font-size: 40px;
+}
+
+.soundBtn {
+    background: transparent;
+    border: none;
+}
+
+.heroBlock {
+    background-image: url('img/sec1bg.png');
+    background-size: auto;       
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    height: 904px;
+    position: relative;
+}
+
+.heroContent {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 113px 0 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#Natsuki, #Monika, #Sayori, #Yuri {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease; 
+    transform-origin: bottom center;
+    cursor: pointer;
+}
+
+#Natsuki {
+    left: 0;
+    top: 161px;
+    width: 482px;
+    height: 743px;
+    z-index: 2;
+    background-image: url('img/natsuki.png');
+    clip-path: polygon(0% 53%, 12% 41%, 24% 33%, 8% 18%, 17% 5%, 56% 0%, 92% 15%, 74% 34%, 91% 48%, 96% 59%, 76% 73%, 86% 87%, 63% 100%, 29% 100%, 17% 97%, 7% 88%, 19% 72%);
+}
+
+
+#Monika {
+    top: 40px;
+    left: 261px;
+    width: 746px;
+    height: 864px;
+    z-index: 1;
+    background-image: url('img/monika.png');
+    clip-path: polygon(16% 63%, 18% 58%, 6% 44%, 4% 31%, 15% 35%, 23% 28%, 21% 15%, 27% 6%, 44% 2%, 58% 10%, 61% 22%, 85% 27%, 100% 36%, 97% 57%, 87% 59%, 79% 72%, 64% 67%, 54% 53%, 45% 59%, 59% 72%, 41% 100%, 19% 100%, 14% 81%, 2% 76%, 2% 66%);
+}
+
+
+#Sayori {
+    top: 142px;
+    left: 649px;
+    width: 395px;
+    height: 762px;
+    z-index: 2;
+    background-image: url('img/sayori.png');
+    clip-path: polygon(26% 72%, 14% 62%, 15% 55%, 12% 38%, 5% 31%, 2% 19%, 7% 6%, 28% 0%, 58% 3%, 61% 22%, 68% 37%, 100% 37%, 100% 63%, 76% 100%, 12% 100%, 23% 84%);
+}
+
+
+#Yuri {
+    top: 40px;
+    left: 735px;
+    width: 634px;
+    height: 864px;
+    z-index: 3;
+    background-image: url('img/yuri.png');
+    clip-path: polygon(28% 91%, 14% 82%, 2% 63%, 0% 33%, 13% 48%, 26% 37%, 31% 25%, 29% 9%, 36% 2%, 60% 0%, 69% 14%, 84% 38%, 100% 52%, 97% 69%, 70% 100%, 33% 100%);
+}
+
+
+#Natsuki:hover, 
+#Monika:hover, 
+#Sayori:hover, 
+#Yuri:hover {
+    transform: scale(1.05); 
+    z-index: 10;            
+}
+
+.heroBlock:has(#Natsuki:hover, #Monika:hover, #Sayori:hover, #Yuri:hover) :is(#Natsuki, #Monika, #Sayori, #Yuri):not(:hover) {
+    filter: contrast(0.7) saturate(0.9); 
+}
+
+.helloText {
+    font-family: 'calson';
+    font-size: 40px;
+    color: #440D32;
+    position: absolute;
+    margin-right: 50px;
+    margin-top: 80px;
+    right: 0;
+    width: 423px;
+    text-align: right;
+}
+
+.heroText {
+    background-image: url(/img/textBG.png);
+    width: 1694px;
+    height: 202px;
+    z-index: 20;
+    position: absolute;
+    top: 650px;
+}
+
+.readNow {
+    background-image: url(/img/sec2BG.png);
+    background-size: auto;       
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    height: 1080px;
+    position: relative;
+}
+
+.readNow h1 {
+    font-family: 'calson';
+    font-size: 83.85px;
+    color: #EF539C;
+    position: relative;
+    top: 78px;
+    left: 113px;
+}
+
+#RNguestText {
+    font-family: 'calson';
+    position: relative;
+    color: #440D32;
+    font-size: 40px;
+    width: 1538px;
+    left: 113px;
+    top: 80px;
+}
+
+#example {
+    position: relative;
+    top: 100px;
+    right: -483px;
+}
+
+#bookExample {
+    position: absolute;
+    top: 315px;
+    left: 118px;
+}
+
+.readNow a {
+    padding: 22px 40px;
+    border-radius: 20px;
+    background-color: #EF539C;
+    position: absolute;
+    left: 118px;
+    font-family: '';
+}
