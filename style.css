@@ -13,6 +13,11 @@
     src: url('/fonts/ofont.ru_Caslon\ Becker.ttf');
 }
 
+@font-face {
+    font-family: 'montserratBold';
+    src: url('/fonts/Montserrat-Bold.ttf');
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -215,5 +220,9 @@ header .active {
     background-color: #EF539C;
     position: absolute;
     left: 118px;
-    font-family: '';
+    font-family: 'montserratBold';
+    font-size: 24px;
+    color: #FFFFFF;
+    top: 834px;
+    left: 118px;
 }
