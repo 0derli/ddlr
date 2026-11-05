@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doki Doki Reader Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="/img/logo.png" alt="">
+            <ul>
+                <li><a href="index.html" class="navLink active">Главная</a></li>
+                <li><a href="diary.html" class="navLink">Мой дневник</a></li>
+                <li><a href="statistics.html" class="navLink">Статистика</a></li>
+            </ul>
+            <button type="button" class="soundBtn">
+                <img src="/img/soundActive.png" alt="звук" id="soundIcon">
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section class="heroBlock">
+            <div class="heroContent">
+
+                <div style="display: none;">
+                    <img src="img/NatsukiActive.png" alt="">
+                    <img src="img/MonikaActive.png" alt="">
+                    <img src="img/SayoriActive.png" alt="">
+                    <img src="img/YuriActive.png" alt="">
+                </div>
+
+                <div class="girlCard" data-character="Natsuki" id="Natsuki">
+                    <div class="girlImage">
+                        <img alt="" src="img/natsukiPas.png" class="imgDefault">
+                        <img src="img/NatsukiActive.png" class="imgActive" alt="Natsuki Active">
+                    </div>
+                </div>
+
+                <div class="girlCard" data-character="Monika" id="Monika">
+                    <div class="girlImage">
+                        <img alt="" src="img/monikaPas.png">
+                    </div>
+                </div>
+
+                <div class="girlCard" data-character="Sayori" id="Sayori">
+                    <div class="girlImage">
+                        <img alt="" src="img/SayoriPas.png">
+                    </div>
+                </div>
+
+                <div class="girlCard" data-character="Yuri" id="Yuri">
+                    <div class="girlImage">
+                        <img alt="" src="img/YuriPas.png">
+                    </div>
+                </div>
+
+                <p class="helloText">Добро пожаловать в Читательский Клуб!
+                    Наш клуб - это твой личный интерактивный читательский дневник. Здесь ты можешь вести учет
+                    прочитанных книг, сохранять любимые цитаты и отслеживать свой прогресс чтения.
+                </p>
+                <div class="heroText">
+                    
+                </div>
+            </div>
+        </section>
+        <section class="readNow">
+            <h1>Читаю сейчас</h1>
+            <p id="RNguestText">«Здесь будет отображаться книга, которую ты читаешь прямо сейчас! Вступай в наш клуб, чтобы отслеживать свой прогресс и делиться мнением.»</p>
+            <img alt="" src="/img/RNexample.png" id="example" title="Это просто пример! Зарегистрируйся и добавляй свою первую книгу!">
+            <img alt="" src="/img/book.png" id="bookExample">
+            <a>Добавить запись</a>
+        </section>
+        <section class="test">
+            <h2>Не знаешь что почитать? Клуб поможет!</h2>
+            
+            <form class="testForm">
+                <fieldset  class="questions" id="question" data-question-id="1">
+                <legend>Какое у тебя сейчас настроение?</legend>
+            </fieldset>
+
+            <div class="answers">
+                <label>
+                <input type="radio" name="q1" value="adventure">
+                Хочу приключений и драйва
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="cozy">
+                Хочу уюта и спокойствия
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="mystery">
+                Хочу загадок и тайн
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="deep">
+                Хочу глубоких размышлений
+            </label>
+            </div>
+            </form>
+            <div class="chibiGirls">
+                <img alt="" src="/img/natsukiChibi.png" id="chibiNatsuki">
+                <img alt="" src="/img/monikaChibi.png" id="chibiMonika">
+                <img alt="" src="/img/sayoriChibi.png" id="chibiSayori">
+                <img alt="" src="/img/yuriChibi.png" id="chibiYuri">
+            </div>
+        </section>
+            <section class="authSection" id="authSection">
+  <h2 id="authTitle" class="authTitle">Регистрация</h2>
+
+  <form id="formRegister" class="authForm" novalidate>
+    <label class="formField">
+      <span class="formLabel">Имя</span>
+      <input class="formInput" type="text" name="name" autocomplete="name" required>
+    </label>
+
+    <label class="formField">
+      <span class="formLabel">Email</span>
+      <input class="formInput" type="email" name="email" autocomplete="email" required>
+    </label>
+
+    <label class="formField">
+      <span class="formLabel">Пароль</span>
+      <input class="formInput" type="password" name="password" autocomplete="new-password" required minlength="6">
+    </label>
+
+    <button type="submit" class="submitButton">Зарегистрироваться</button>
+    <p class="formError" role="alert" hidden></p>
+  </form>
+
+  <form id="formLogin" class="authForm" novalidate hidden>
+    <label class="formField">
+      <span class="formLabel">Email</span>
+      <input class="formInput" type="email" name="email" autocomplete="email" required>
+    </label>
+
+    <label class="formField">
+      <span class="formLabel">Пароль</span>
+      <input class="formInput" type="password" name="password" autocomplete="current-password" required minlength="6">
+    </label>
+
+    <button type="submit" class="submitButton">Войти</button>
+    <p class="formError" role="alert" hidden></p>
+  </form>
+
+    <p class="authSwitch">
+    <span id="authHint">Уже в клубе?</span>
+    <button type="button" class="linkButton" id="authToggle">Войти</button>
+  </p>
+
+        </section>
+    </main>
+    <footer></footer>
+    <script src="auth.js"></script>
+</body>
+
+</html>
